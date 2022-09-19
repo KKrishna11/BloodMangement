@@ -26,6 +26,7 @@ public class Homepage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -45,14 +46,24 @@ public class Homepage extends javax.swing.JFrame {
         jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Homepage");
         setLocation(new java.awt.Point(0, 0));
         setMinimumSize(new java.awt.Dimension(1580, 880));
-        setPreferredSize(new java.awt.Dimension(1300, 780));
 
-        jMenu1.setText("DONOR");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/homebgfinal (2).jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
+        jMenuBar1.setBackground(new java.awt.Color(255, 51, 51));
+        jMenuBar1.setMaximumSize(new java.awt.Dimension(375, 650));
+
+        jMenu1.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setText("           DONOR        ");
+        jMenu1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jMenu1.setOpaque(true);
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setText("ADD New");
+        jMenuItem1.setText("ADD NEW                                               ");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -80,10 +91,14 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Search BLOOD DONOR");
+        jMenu2.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu2.setText("                 SEARCH  BLOOD DONOR           ");
+        jMenu2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jMenu2.setOpaque(true);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, 0));
-        jMenuItem4.setText("location");
+        jMenuItem4.setText("LOCATION                                                               ");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -92,7 +107,7 @@ public class Homepage extends javax.swing.JFrame {
         jMenu2.add(jMenuItem4);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, 0));
-        jMenuItem5.setText("blood group");
+        jMenuItem5.setText("BLOOD GROUP");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -102,10 +117,14 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("STOCKS");
+        jMenu3.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu3.setText("                   STOCKS                       ");
+        jMenu3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jMenu3.setOpaque(true);
 
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, 0));
-        jMenuItem6.setText("Increase");
+        jMenuItem6.setText("INCREASE                                                                ");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
@@ -114,7 +133,7 @@ public class Homepage extends javax.swing.JFrame {
         jMenu3.add(jMenuItem6);
 
         jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_DOWN_MASK));
-        jMenuItem7.setText("Decrease");
+        jMenuItem7.setText("DECREASE");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem7ActionPerformed(evt);
@@ -123,7 +142,7 @@ public class Homepage extends javax.swing.JFrame {
         jMenu3.add(jMenuItem7);
 
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, 0));
-        jMenuItem8.setText("Details");
+        jMenuItem8.setText("DETAILS");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
@@ -133,10 +152,15 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("DELETE DONOR");
+        jMenu4.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu4.setBorder(new javax.swing.border.MatteBorder(null));
+        jMenu4.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu4.setText("   DELETE DONOR              ");
+        jMenu4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jMenu4.setOpaque(true);
 
         jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem9.setText("Delete Donor");
+        jMenuItem9.setText("DELETE DONOR                                    ");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem9ActionPerformed(evt);
@@ -146,7 +170,11 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setText("EXIT");
+        jMenu5.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu5.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu5.setText("        EXIT                      ");
+        jMenu5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
+        jMenu5.setOpaque(true);
         jMenu5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu5ActionPerformed(evt);
@@ -179,11 +207,15 @@ public class Homepage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1598, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1318, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 677, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 3338, Short.MAX_VALUE))
         );
 
         pack();
@@ -222,7 +254,7 @@ public class Homepage extends javax.swing.JFrame {
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
-        int ask =JOptionPane.showConfirmDialog(null,"Confirm shoud i close app","SELECT",JOptionPane.YES_NO_OPTION);
+        int ask =JOptionPane.showConfirmDialog(null,"Confirm Logout out ","SELECT",JOptionPane.YES_NO_OPTION);
         if (ask==0)
         {
             setVisible(false);
@@ -232,7 +264,15 @@ public class Homepage extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+
         // TODO add your handling code here:
+        int ask1 =JOptionPane.showConfirmDialog(null,"Confirm  to close  ","SELECT",JOptionPane.YES_NO_OPTION);
+        if (ask1==0)
+        {
+            setVisible(false);
+
+        }
+
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
@@ -323,6 +363,7 @@ public class Homepage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
