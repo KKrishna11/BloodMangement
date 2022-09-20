@@ -36,15 +36,12 @@ public class stockDecrease extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jSeparator3 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -63,19 +60,17 @@ public class stockDecrease extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Stock (Decrease)");
+        jLabel2.setText("STOCK DECREASE");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(670, 120, 372, 47);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(420, 180, 764, 20);
+        jLabel2.setBounds(680, 30, 410, 47);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Blood Group");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(490, 210, 120, 22);
+        jLabel3.setBounds(290, 180, 160, 29);
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select ", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB_" }));
         jComboBox1.setToolTipText("select the requiered blood group");
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +79,7 @@ public class stockDecrease extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(620, 210, 120, 30);
+        jComboBox1.setBounds(510, 180, 120, 30);
 
         jTextField1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -94,9 +89,9 @@ public class stockDecrease extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(840, 210, 100, 26);
+        jTextField1.setBounds(840, 180, 140, 30);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton1.setText("Update");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,10 +99,9 @@ public class stockDecrease extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(1050, 210, 118, 23);
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(420, 250, 770, 20);
+        jButton1.setBounds(1110, 180, 118, 40);
 
+        jTable1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -119,6 +113,7 @@ public class stockDecrease extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setRowHeight(44);
         jTable1.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jTable1ComponentShown(evt);
@@ -132,11 +127,9 @@ public class stockDecrease extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(470, 280, 723, 290);
-        getContentPane().add(jSeparator3);
-        jSeparator3.setBounds(440, 580, 764, 20);
+        jScrollPane1.setBounds(360, 270, 840, 380);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton2.setText("Print");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,9 +137,9 @@ public class stockDecrease extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(430, 600, 72, 23);
+        jButton2.setBounds(300, 690, 120, 35);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,9 +147,9 @@ public class stockDecrease extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(1140, 600, 72, 23);
+        jButton3.setBounds(1150, 690, 110, 35);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Z9F2ap (1).jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img21 (1) (1) (2).png"))); // NOI18N
         jLabel5.setText("jLabel5");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(0, -30, 2070, 1040);
@@ -227,11 +220,23 @@ public class stockDecrease extends javax.swing.JFrame {
         {
             Connection con=ConnectionProvider.getCon();
             Statement st=con.createStatement();
+            if (unit1 >=0)
+            {
+            
             st.executeUpdate("update finaldoonor set units=units-'"+unit1+"'where bloodgroup='"+bloodgroup+"'");
-//            jTable1.setAutoResizeMode(jTable1.AUTO_RESIZE_OFF);
             JOptionPane.showMessageDialog(null,"Successfully Updated");
             setVisible(false);
             new stockDecrease().setVisible(true);
+                
+            }
+            else
+            {
+                        JOptionPane.showMessageDialog(null,"Check Units Number, No Negative Number ");
+            }
+//            st.executeUpdate("update finaldoonor set units=units-'"+unit1+"'where bloodgroup='"+bloodgroup+"'");
+//            JOptionPane.showMessageDialog(null,"Successfully Updated");
+//            setVisible(false);
+//            new stockDecrease().setVisible(true);
          
 
         }
@@ -305,9 +310,6 @@ public class stockDecrease extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

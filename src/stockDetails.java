@@ -35,15 +35,14 @@ public class stockDetails extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jSeparator2 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Stock Details");
@@ -57,13 +56,12 @@ public class stockDetails extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
-        jLabel1.setText("Stock Details");
+        jLabel1.setFont(new java.awt.Font("Algerian", 1, 48)); // NOI18N
+        jLabel1.setText("STOCK DETAILS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(600, 20, 300, 47);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(310, 110, 810, 10);
+        jLabel1.setBounds(560, 20, 400, 62);
 
+        jTable1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -75,12 +73,16 @@ public class stockDetails extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setRowHeight(55);
+        jTable1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jTable1ComponentShown(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(310, 120, 840, 480);
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(350, 550, 810, 10);
+        jScrollPane1.setBounds(320, 110, 840, 480);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/print (1).png"))); // NOI18N
@@ -91,7 +93,7 @@ public class stockDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(330, 640, 140, 40);
+        jButton1.setBounds(220, 670, 140, 40);
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton2.setText("Back");
@@ -101,21 +103,36 @@ public class stockDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(1050, 640, 110, 40);
+        jButton2.setBounds(1190, 670, 100, 40);
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton3.setText("Stock increase");
+        jButton3.setText("Stock Increase");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
-        jButton3.setBounds(530, 640, 220, 40);
+        jButton3.setBounds(500, 670, 220, 40);
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton4.setText("stock decrease");
+        jButton4.setText("Stock Decrease");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4);
-        jButton4.setBounds(800, 640, 220, 40);
+        jButton4.setBounds(850, 670, 220, 40);
 
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-240, -70, 38, 16);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img21 (1) (1) (2).png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 1590, 860);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -133,7 +150,7 @@ public class stockDetails extends javax.swing.JFrame {
         }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null,e);
+            JOptionPane.showMessageDialog(null,"Reload Page");
         }
         
         
@@ -164,7 +181,7 @@ public class stockDetails extends javax.swing.JFrame {
         catch(Exception e)
         {
             
-            JOptionPane.showMessageDialog(null,e);
+            JOptionPane.showMessageDialog(null,"Reload Page");
             
         }
            
@@ -172,6 +189,30 @@ public class stockDetails extends javax.swing.JFrame {
                // TODO add your handling code here:
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+                    setVisible(false);
+            new stockIncrease().setVisible(true);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+            // TODO add your handling code here:
+            setVisible(false);
+            new stockDecrease().setVisible(true);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jTable1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTable1ComponentShown
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_jTable1ComponentShown
 
     /**
      * @param args the command line arguments
@@ -215,9 +256,8 @@ public class stockDetails extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

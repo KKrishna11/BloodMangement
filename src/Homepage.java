@@ -1,4 +1,6 @@
 import javax.swing.JOptionPane;
+import java.awt.Desktop;  
+import java.io.*;  
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -41,6 +43,8 @@ public class Homepage extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem12 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
@@ -58,7 +62,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenu1.setBackground(new java.awt.Color(0, 0, 0));
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu1.setText("           DONOR        ");
+        jMenu1.setText("     DONOR        ");
         jMenu1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jMenu1.setOpaque(true);
 
@@ -93,7 +97,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenu2.setBackground(new java.awt.Color(0, 0, 0));
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu2.setText("                 SEARCH  BLOOD DONOR           ");
+        jMenu2.setText("       SEARCH  BLOOD DONOR     ");
         jMenu2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jMenu2.setOpaque(true);
 
@@ -119,7 +123,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenu3.setBackground(new java.awt.Color(0, 0, 0));
         jMenu3.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu3.setText("                   STOCKS                       ");
+        jMenu3.setText("       STOCKS           ");
         jMenu3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jMenu3.setOpaque(true);
 
@@ -155,7 +159,7 @@ public class Homepage extends javax.swing.JFrame {
         jMenu4.setBackground(new java.awt.Color(0, 0, 0));
         jMenu4.setBorder(new javax.swing.border.MatteBorder(null));
         jMenu4.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu4.setText("   DELETE DONOR              ");
+        jMenu4.setText("         DELETE DONOR         ");
         jMenu4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jMenu4.setOpaque(true);
 
@@ -170,9 +174,30 @@ public class Homepage extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu6.setBackground(new java.awt.Color(0, 0, 0));
+        jMenu6.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu6.setText("            QUERY            ");
+        jMenu6.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jMenu6.setOpaque(true);
+        jMenu6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu6ActionPerformed(evt);
+            }
+        });
+
+        jMenuItem12.setText("RaktVeer");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem12);
+
+        jMenuBar1.add(jMenu6);
+
         jMenu5.setBackground(new java.awt.Color(0, 0, 0));
         jMenu5.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu5.setText("        EXIT                      ");
+        jMenu5.setText("             EXIT                     ");
         jMenu5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
         jMenu5.setOpaque(true);
         jMenu5.addActionListener(new java.awt.event.ActionListener() {
@@ -326,6 +351,44 @@ public class Homepage extends javax.swing.JFrame {
                 
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void jMenu6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu6ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+        
+       
+//        new ChatbotDemo();
+//        System.out.println("button clicked ");
+//         new ChatbotDemo.setVisible(true);
+//         this.dispose();
+
+//    try  
+//{  
+////constructor of file class having file as argument  
+//File file = new File("D:\\java\\Blood Bank Management System\\src\\ChatbotDemo.java");   
+//if(!Desktop.isDesktopSupported())//check if Desktop is supported by Platform or not  
+//{  
+//System.out.println("not supported");  
+//return;  
+//}  
+//Desktop desktop = Desktop.getDesktop();  
+//if(file.exists())         //checks file exists or not  
+//desktop.open(file);              //opens the specified file  
+//}  
+//catch(Exception e)  
+//{  
+//e.printStackTrace();  
+//}  
+
+        System.out.println("button clickedd");
+        
+//        called from another class 
+         new Chatbot().setVisible(rootPaneCheckingEnabled); 
+         
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -369,10 +432,12 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

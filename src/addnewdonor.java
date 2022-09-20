@@ -78,7 +78,7 @@ public class addnewdonor extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Cambria", 1, 55)); // NOI18N
         jLabel1.setText("ADD NEW DONOR");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, -1, 71));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, 71));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 77, 1420, 0));
@@ -249,6 +249,7 @@ public class addnewdonor extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 700, -1, -1));
 
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img21 (1) (1) (2).png"))); // NOI18N
         jLabel14.setText("jLabel14");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -314,10 +315,10 @@ public class addnewdonor extends javax.swing.JFrame {
         {
             
         String donorId=jLabel3.getText();
-        if(jTextField1.getText().equals(""))
-        {
-        JOptionPane.showMessageDialog(null,"Username cannot be empty  ");
-        }
+//        if(jTextField1.getText().equals(""))
+//        {
+//        JOptionPane.showMessageDialog(null,"Username cannot be empty  ");
+//        }
         
         String Name=jTextField1.getText();
         String FatherName=jTextField2.getText();
@@ -325,10 +326,10 @@ public class addnewdonor extends javax.swing.JFrame {
         SimpleDateFormat dFormat= new SimpleDateFormat("dd--MM--YYYY");
         String DOB =dFormat.format(jDateChooser1.getDate());
        
-        if(jTextField4.getText().equals(""))
-        {
-        JOptionPane.showMessageDialog(null,"Phone number cannot be empty  ");
-        }
+//        if(jTextField4.getText().equals(""))
+//        {
+//        JOptionPane.showMessageDialog(null,"Phone number cannot be empty  ");
+//        }
         
         String MobileNumber=jTextField4.getText();
         String gender=(String)jComboBox1.getSelectedItem();
@@ -341,7 +342,7 @@ public class addnewdonor extends javax.swing.JFrame {
        catch(NullPointerException ex)
         {
               
-            JOptionPane.showMessageDialog(null,"values are all null ");
+            JOptionPane.showMessageDialog(null,"Fill all the Donor details ");
            
         } 
 
@@ -356,11 +357,10 @@ public class addnewdonor extends javax.swing.JFrame {
         String MotherName=jTextField3.getText();
         SimpleDateFormat dFormat= new SimpleDateFormat("dd--MM--YYYY");
         String DOB =dFormat.format(jDateChooser1.getDate());
-       
-        if(jTextField4.getText().equals(""))
-        {
-        JOptionPane.showMessageDialog(null,"Phone number cannot be empty  ");
-        }
+        
+        System.out.println(jDateChooser1.getDate());
+        
+        
         
         String MobileNumber=jTextField4.getText();
         String gender=(String)jComboBox1.getSelectedItem();
@@ -375,12 +375,31 @@ public class addnewdonor extends javax.swing.JFrame {
             Connection con=ConnectionProvider.getCon();
             Statement st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
             ResultSet.CONCUR_READ_ONLY);
-            
+        if(jTextField4.getText().equals(""))
+        {
+        JOptionPane.showMessageDialog(null,"Phone number cannot be empty  ");
+        }
+        else if(jTextField4.getText().length()<10)
+        {
+                    JOptionPane.showMessageDialog(null,"need 10 digit Mobile number  ");
+        }
+        else if(jTextField4.getText().length()>=11)
+        {
+                    JOptionPane.showMessageDialog(null,"need 10 digit Mobile number ");
+        }
+        
+        else
+        {
+
             st.executeUpdate("insert into donor values ('"+donorId+"','"+Name+"','"+FatherName+"','"+MotherName+"','"+DOB+"','"+MobileNumber+"','"+gender+"','"+email+"','"+BloodGroup+"','"+city+"','"+address+"')");
-//            System.out.println("atleast it was connected ");
             JOptionPane.showMessageDialog(null,"succesfully added");
             setVisible(false);
             new addnewdonor().setVisible(true);
+        }   
+//            st.executeUpdate("insert into donor values ('"+donorId+"','"+Name+"','"+FatherName+"','"+MotherName+"','"+DOB+"','"+MobileNumber+"','"+gender+"','"+email+"','"+BloodGroup+"','"+city+"','"+address+"')");
+//            JOptionPane.showMessageDialog(null,"succesfully added");
+//            setVisible(false);
+//            new addnewdonor().setVisible(true);
         }
          catch (Exception e) {
          JOptionPane.showMessageDialog(null,e);

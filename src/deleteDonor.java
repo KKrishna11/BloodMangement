@@ -33,8 +33,6 @@ public class deleteDonor extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -48,7 +46,6 @@ public class deleteDonor extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
@@ -74,13 +71,7 @@ public class deleteDonor extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Cambria", 1, 55)); // NOI18N
         jLabel1.setText("DELETE  DONOR");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 6, -1, 75));
-
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 87, 1434, 10));
-
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 170, 1434, 13));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, -1, 75));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 32)); // NOI18N
         jLabel2.setText(" Donor ID :");
@@ -140,9 +131,6 @@ public class deleteDonor extends javax.swing.JFrame {
         jLabel12.setText(" Address : ");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 438, -1, -1));
 
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 659, 1440, 10));
-
         jTextField2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jTextField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, java.awt.Color.black, null, null));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 195, 294, -1));
@@ -189,14 +177,14 @@ public class deleteDonor extends javax.swing.JFrame {
         getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(986, 355, 334, -1));
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jButton2.setText("Save");
+        jButton2.setText("Delete");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 681, 105, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 681, 120, -1));
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jButton3.setText("Reset");
@@ -236,6 +224,7 @@ public class deleteDonor extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(986, 443, 334, 141));
 
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img21 (1) (1) (2).png"))); // NOI18N
         jLabel13.setText("jLabel13");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -246,7 +235,6 @@ public class deleteDonor extends javax.swing.JFrame {
         // TODO add your handling code here:
 
  String donorId=jTextField1.getText();
-       
       
        try
         {
@@ -273,7 +261,7 @@ public class deleteDonor extends javax.swing.JFrame {
             {
               
                 
-            JOptionPane.showMessageDialog(null,"donor id does not prsent in the table ");
+            JOptionPane.showMessageDialog(null,"donor id does not present in the table ");
                 
                 
                 
@@ -329,11 +317,17 @@ String donorId=jTextField1.getText();
             Connection con=ConnectionProvider.getCon();
             Statement st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
             ResultSet.CONCUR_READ_ONLY);
+            if(jTextField1.getText().equals(""))
+            {
+                        JOptionPane.showMessageDialog(null,"Enter Donor Id");
+            }
+            else{
             st.executeUpdate("delete from donor where donorId='"+donorId+"'");
             System.out.println("atleast it was connected ");
-            JOptionPane.showMessageDialog(null,"succesfully deleted");
+            JOptionPane.showMessageDialog(null,"Succesfully Deleted");
             setVisible(false);
             new deleteDonor().setVisible(true);
+            }
         }
         catch(Exception e)
         {
@@ -401,9 +395,6 @@ String donorId=jTextField1.getText();
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;

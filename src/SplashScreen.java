@@ -26,7 +26,7 @@ public class SplashScreen extends javax.swing.JFrame {
         LoadingBar = new javax.swing.JProgressBar();
         LoadingLabel = new javax.swing.JLabel();
         LoadingValue = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loading");
@@ -37,41 +37,43 @@ public class SplashScreen extends javax.swing.JFrame {
         BackGround.setMinimumSize(new java.awt.Dimension(1000, 900));
         BackGround.setPreferredSize(new java.awt.Dimension(1000, 900));
         BackGround.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        BackGround.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 600, 470));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/splashscreen.png"))); // NOI18N
+        BackGround.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 600, 470));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/line-removebg-preview (2).png"))); // NOI18N
-        BackGround.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
+        BackGround.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
         jLabel2.setText("BLOOD BANK MANAGEMENT SYSTEM");
-        BackGround.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, 670, 60));
+        BackGround.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 670, 60));
 
         LoadingBar.setAlignmentX(0.2F);
-        BackGround.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 1000, 20));
+        BackGround.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 770, 1590, 20));
 
         LoadingLabel.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         LoadingLabel.setText("Loading......");
-        BackGround.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, 40));
+        BackGround.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 720, -1, 40));
 
         LoadingValue.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         LoadingValue.setText("0%");
-        BackGround.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 560, 80, 40));
+        BackGround.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 720, 80, 40));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/splash (1) (1) (1) (1) (1) (1) (1).png"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        BackGround.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1000, 640));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/splash (1) (1) (1) (1) (1) (1) (1).png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        BackGround.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 0, 1630, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(BackGround, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BackGround, javax.swing.GroupLayout.DEFAULT_SIZE, 1593, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackGround, javax.swing.GroupLayout.PREFERRED_SIZE, 633, Short.MAX_VALUE)
+            .addComponent(BackGround, javax.swing.GroupLayout.PREFERRED_SIZE, 788, Short.MAX_VALUE)
         );
 
         pack();
@@ -139,7 +141,7 @@ public class SplashScreen extends javax.swing.JFrame {
 //                System.out.println("the "+sp);
                 if(i==100){ 
                 sp.setVisible(false);
-                new Homepage().setVisible(true);
+                new login().setVisible(true);
                 }
             }
         } catch(Exception e)
@@ -156,6 +158,6 @@ public class SplashScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

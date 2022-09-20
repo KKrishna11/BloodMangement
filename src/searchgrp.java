@@ -36,18 +36,16 @@ public class searchgrp extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jSeparator3 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
         jLabel3.setDoubleBuffered(true);
@@ -60,19 +58,14 @@ public class searchgrp extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Cambria", 1, 46)); // NOI18N
-        jLabel1.setText("SEARCH BLOOD  DONOR (BLOOD GROUP)");
+        jLabel1.setText("SEARCH BLOOD  DONOR ");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(280, 30, 879, 55);
+        jLabel1.setBounds(490, 30, 550, 55);
 
-        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(260, 120, 910, 10);
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jLabel2.setText("Blood Group : ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(460, 140, 212, 46);
+        jLabel2.setBounds(480, 170, 212, 46);
 
         jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -87,14 +80,10 @@ public class searchgrp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(630, 140, 240, 40);
-
-        jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(260, 190, 910, 10);
+        jTextField1.setBounds(770, 170, 240, 40);
 
         jTable1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -107,6 +96,7 @@ public class searchgrp extends javax.swing.JFrame {
             }
         ));
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTable1.setRowHeight(50);
         jTable1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTable1KeyReleased(evt);
@@ -121,11 +111,7 @@ public class searchgrp extends javax.swing.JFrame {
         }
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(270, 230, 870, 336);
-
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jSeparator3);
-        jSeparator3.setBounds(240, 550, 922, 13);
+        jScrollPane1.setBounds(300, 270, 870, 336);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jButton1.setText("Back");
@@ -136,7 +122,7 @@ public class searchgrp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(1000, 580, 140, 50);
+        jButton1.setBounds(1050, 690, 140, 50);
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jButton2.setText(" Print");
@@ -147,7 +133,7 @@ public class searchgrp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(290, 580, 140, 50);
+        jButton2.setBounds(290, 690, 140, 50);
 
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton3.setText("Location");
@@ -159,7 +145,7 @@ public class searchgrp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(520, 580, 140, 50);
+        jButton3.setBounds(550, 690, 140, 50);
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton4.setText("Donor details");
@@ -170,12 +156,17 @@ public class searchgrp extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(750, 580, 190, 50);
+        jButton4.setBounds(780, 690, 190, 50);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img21 (1) (1) (2).png"))); // NOI18N
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(-380, -160, 1900, 850);
+        jLabel4.setBounds(-380, -160, 1970, 980);
+
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(70, 370, 38, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -300,10 +291,8 @@ public class searchgrp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
